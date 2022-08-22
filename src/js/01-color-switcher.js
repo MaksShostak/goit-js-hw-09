@@ -10,11 +10,13 @@ const onButtonStart = function ({ target }) {
     target.parentNode.style.backgroundColor = getRandomHexColor();
   }, 1000);
   target.disabled = true;
+  buttonStop.disabled = false;
 };
 
-const onButtonStop = function () {
+const onButtonStop = function ({ target }) {
   clearInterval(timerId);
   buttonStart.disabled = false;
+  target.disabled = true;
 };
 
 buttonStop.addEventListener('click', onButtonStop);
