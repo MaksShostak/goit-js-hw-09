@@ -17,7 +17,7 @@ const onButtonStop = function ({ target }) {
   clearInterval(timerId);
   buttonStart.disabled = false;
   target.disabled = true;
-  target.parentNode.removeAttribute('style');
+  //   target.parentNode.removeAttribute('style');
 };
 
 buttonStop.addEventListener('click', onButtonStop);
