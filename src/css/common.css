@@ -78,3 +78,11 @@ input {
   font-size: 28px;
   color: rgba(6, 87, 119, 0.772);
 }
+label {
+  display: block;
+  text-align: center;
+
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+}
