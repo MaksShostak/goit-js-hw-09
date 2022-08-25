@@ -4,11 +4,10 @@ import 'flatpickr/dist/flatpickr.min.css';
 import 'flatpickr/dist/themes/material_green.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-// const inputDateValue = document.querySelector('#datetime-picker');
-const daysValueRef = document.querySelector('span[data-days]');
-const hoursValueRef = document.querySelector('span[data-hours]');
-const minutesValueRef = document.querySelector('span[data-minutes]');
-const secondsValueRef = document.querySelector('span[data-seconds]');
+const daysValueRef = document.querySelector('[data-days]');
+const hoursValueRef = document.querySelector('[data-hours]');
+const minutesValueRef = document.querySelector('[data-minutes]');
+const secondsValueRef = document.querySelector('[data-seconds]');
 const buttonStartTimerRef = document.querySelector('button');
 
 buttonStartTimerRef.disabled = true;
@@ -40,7 +39,7 @@ const options = {
     }
   },
 };
-const calendar = flatpickr('#datetime-picker', options);
+flatpickr('#datetime-picker', options);
 
 // function onButtonStartTimer() {
 //   if (isActive) {
@@ -70,6 +69,7 @@ class Timer {
     this.isActive = false;
     this.onStartTimer = onStartTimer;
   }
+
   onButtonStartTimer() {
     if (this.isActive) {
       return;
