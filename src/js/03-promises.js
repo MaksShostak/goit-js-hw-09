@@ -20,7 +20,14 @@ function onFormSubmit(event) {
   let delay = Number(event.currentTarget.elements.delay.value);
   let delayStep = Number(event.currentTarget.elements.step.value);
   if (amount <= 0 || delay < 0 || delayStep < 0) {
-    return;
+    return Notify.warning(`Введіть валідні дані`, {
+      backOverlay: true,
+      backOverlayColor: 'rgba(255, 85, 73, 0.2)',
+      fontSize: '18px',
+      timeout: 5000,
+      clickToClose: true,
+      position: 'center-top',
+    });
   }
   for (let i = 1; i <= amount; i += 1) {
     position = i;
